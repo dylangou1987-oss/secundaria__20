@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secundaria N°20 Ricardo Rojas</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#eef1f5;
+}
+
+header{
+background:#1e3a5f;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+nav{
+background:#2c4d73;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+padding:15px 20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+background:#1e3a5f;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.news{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.news div{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+footer{
+background:#1e3a5f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Escuela Secundaria N°20 Ricardo Rojas</h1>
+<p>Noticias y novedades escolares</p>
+</header>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#noticias">Noticias</a>
+<a href="#fotos">Fotos</a>
+<a href="#eventos">Eventos</a>
+</nav>
+
+<div class="container">
+
+<div class="card" id="inicio">
+<h2>🏫 Inicio</h2>
+<p>Bienvenidos a la página oficial de la Secundaria N°20 de Ricardo Rojas.</p>
+</div>
+
+<div class="card" id="noticias">
+<h2>📰 Noticias</h2>
+<div class="news">
+<div>
+<h3>Centro de estudiantes</h3>
+<p>Próximamente se formará el nuevo centro.</p>
+</div>
+
+<div>
+<h3>Torneo escolar</h3>
+<p>Competencia entre cursos.</p>
+</div>
+
+<div>
+<h3>Feria de ciencias</h3>
+<p>Presentación de proyectos.</p>
+</div>
+
+<div>
+<h3>Programación</h3>
+<p>Clases de tecnología.</p>
+</div>
+</div>
+</div>
+
+<div class="card" id="fotos">
+<h2>📸 Fotos</h2>
+
+<img src="https://lh3.googleusercontent.com/d/1" alt="Escuela">
+
+</div>
+
+<div class="card" id="eventos">
+<h2>📅 Eventos</h2>
+<ul>
+<li>Feria de ciencias 2026</li>
+<li>Torneo deportivo</li>
+<li>Acto escolar</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+<p>Página creada por Dylan</p>
+</footer>
+
+</body>
+</html>
