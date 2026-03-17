@@ -105,14 +105,14 @@ grid-template-columns:1fr 1fr;
 
 </head>
 
-  <script>
+<script>
 function toggleInfo(id){
-let elemento = document.getElementById(id);
+let x = document.getElementById(id);
 
-if(elemento.style.display === "none"){
-elemento.style.display = "block";
+if(x.style.display === "none"){
+x.style.display = "block";
 }else{
-elemento.style.display = "none";
+x.style.display = "none";
 }
 }
 </script>
@@ -159,12 +159,12 @@ elemento.style.display = "none";
 <h3>Nuevo Centro De Estudiantes</h3>
 <p>La escuela inaugura un nuevo centro de estudiantes (Próximamente).</p>
 
-<button onclick="mostrar('info1')">Ver más</button>
+<button onclick="toggleInfo('info1')">Ver más</button>
 <button onclick="alert('Inscripción próximamente')">Inscribirse</button>
 <button onclick="alert('Elecciones en mayo')">Fechas</button>
 
 <div id="info1" style="display:none; margin-top:10px;">
-<p>El centro de estudiantes permitirá a los alumnos participar en decisiones escolares.</p>
+<p>El centro de estudiantes permitirá a los alumnos participar en decisiones escolares, organizar eventos y representar a sus compañeros.</p>
 </div>
 
 </div>
