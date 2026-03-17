@@ -58,22 +58,29 @@ grid-template-columns:1fr 1fr;
 gap:15px;
 }
 
-.news div{
-background:white;
+.panel{
+display:none;
+background:#dff0ff;
 padding:15px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+margin-top:10px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
+.login-box input, select{
+width:90%;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
-.gallery img{
-width:100%;
-border-radius:10px;
+.login-box button{
+background:#1e3a5f;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
 }
 
 footer{
@@ -84,122 +91,130 @@ padding:20px;
 margin-top:30px;
 }
 
-@media (max-width:700px){
-
-.news{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<h1>Escuela Secundaria N°20 Rodolfo Walsh</h1>
-<p>Secundaria N°20 ubicada en Ricardo Rojas, Aquí recibirán actualizaciones sobre lo que pasa en la escuela</p>
-
+<h1>Escuela Secundaria N°20 Ricardo Rojas</h1>
+<p>Portal oficial escolar</p>
 </header>
 
 <nav>
-
 <a href="#inicio">Inicio</a>
 <a href="#noticias">Noticias</a>
+<a href="#login">Login</a>
 <a href="#eventos">Eventos</a>
-<a href="#institucion">Institución</a>
-<a href="#estudiantes">Estudiantes</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
 
 <div class="container">
 
 <div class="card" id="inicio">
-
-<h2>
-🏫 Inicio
-</h2>
-
-<p>La Escuela Secundaria N°20 Ricardo Rojas forma estudiantes con valores, conocimiento y compromiso con la comunidad de Ricardo Rojas y el Partido de Tigre</p>
-
+<h2>🏫 Inicio</h2>
+<p>Formamos estudiantes con valores y compromiso.</p>
 </div>
 
 <div class="card" id="noticias">
-
 <h2>📰 Noticias</h2>
-
 <div class="news">
-<h3>Nuevo Centro De Estudiantes</h3>
-<p>La escuela inaugura un nuevo centro de estudiantes (Próximamente).</p>
+<div><h3>Centro de estudiantes</h3><p>Próximamente elecciones.</p></div>
+<div><h3>Torneo escolar</h3><p>Competencia entre cursos.</p></div>
+<div><h3>Feria de ciencias</h3><p>Proyectos 2026.</p></div>
+<div><h3>Programación</h3><p>Aprende tecnología.</p></div>
+</div>
 </div>
 
-<div>
-<h3>Torneo</h3>
-<p>Se realizará un torneo de tareas entre cursos</h3>
-</div>
-<div>
-<h3>Proyectos escolares</h3>
-<p>Los estudiantes presentarán proyectos escolares.</p>
+<!-- LOGIN -->
+<div class="card" id="login">
+<h2>🔐 Login</h2>
+
+<div class="login-box">
+<select id="rol">
+<option value="estudiante">Estudiante</option>
+<option value="profesor">Profesor / Autoridad</option>
+</select>
+
+<input type="text" id="user" placeholder="Usuario">
+<input type="password" id="pass" placeholder="Contraseña">
+
+<button onclick="login()">Ingresar</button>
+<p id="mensaje"></p>
 </div>
 
-<div>
-<h3>Proyectos de programación</h3>
-<p>Actividad para aprender tecnología.</p>
+<!-- PANEL ESTUDIANTE -->
+<div id="panelEstudiante" class="panel">
+<h3>🎓 Panel Estudiante</h3>
+<ul>
+<li>📚 Ver materias</li>
+<li>📝 Ver tareas</li>
+<li>📊 Ver notas</li>
+<li>📢 Avisos escolares</li>
+</ul>
+</div>
+
+<!-- PANEL PROFESOR -->
+<div id="panelProfesor" class="panel">
+<h3>🏫 Panel Profesor / Autoridad</h3>
+<ul>
+<li>📝 Cargar notas</li>
+<li>📢 Publicar avisos</li>
+<li>📅 Crear eventos</li>
+<li>👨‍🎓 Gestionar estudiantes</li>
+</ul>
+</div>
 
 </div>
-</div>
+
 <div class="card" id="eventos">
-
 <h2>📅 Eventos</h2>
-
 <ul>
-
-<li>... — Proyectos escolares </li>
-<li>... — Torneo deportivo</li>
-<li>... — Acto escolar</li>
-
+<li>Feria de ciencias</li>
+<li>Torneo deportivo</li>
+<li>Acto escolar</li>
 </ul>
-
 </div>
 
-<div class="card" id="institucion">
-
-<h2>🏫 Institución</h2>
-
-<p>Cuenta con proyectos educativos, y actividades deportivas.</p>
-
-</div>
-
-<div class="card" id="estudiantes">
-
-<h2>🎓 Estudiantes</h2>
-
-<p>Los estudiantes participan en actividades como:</p>
-
-<ul>
-<li>Centro de estudiantes</li>
-<li>Eventos deportivos</li>
-</ul>
-
-</div>
-  
 <div class="card" id="contacto">
-
 <h2>📞 Contacto</h2>
-
 <p>Email: secundaria20@escuela.edu</p>
-<p>Teléfono: 22024845</p>
-<p>Dirección: Ricardo Rojas. Tigre. Buenos Aires</p>
-
+<p>Dirección: Ricardo Rojas, Tigre</p>
 </div>
 
 </div>
-  
+
+<footer>
+<p>Página creada por Dylan</p>
+</footer>
+
+<script>
+
+function login(){
+let user = document.getElementById("user").value;
+let pass = document.getElementById("pass").value;
+let rol = document.getElementById("rol").value;
+
+let mensaje = document.getElementById("mensaje");
+
+document.getElementById("panelEstudiante").style.display = "none";
+document.getElementById("panelProfesor").style.display = "none";
+
+if(rol === "estudiante" && user === "alumno" && pass === "1234"){
+mensaje.innerHTML = "✅ Bienvenido estudiante";
+document.getElementById("panelEstudiante").style.display = "block";
+}
+else if(rol === "profesor" && user === "admin" && pass === "1234"){
+mensaje.innerHTML = "✅ Bienvenido profesor";
+document.getElementById("panelProfesor").style.display = "block";
+}
+else{
+mensaje.innerHTML = "❌ Datos incorrectos";
+}
+
+}
+
+</script>
+
+</body>
+  </html>
