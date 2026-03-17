@@ -1,10 +1,3 @@
-index html
-
-from http.server import SimpleHTTPRequestHandler, HTTPServer
-
-PORT = 8000
-
-html = """
 <!DOCTYPE html>
 <html>
 
@@ -75,17 +68,6 @@ border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
 footer{
 background:#1e3a5f;
 color:white;
@@ -100,10 +82,6 @@ margin-top:30px;
 grid-template-columns:1fr;
 }
 
-.gallery{
-grid-template-columns:1fr 1fr;
-}
-
 }
 
 </style>
@@ -114,8 +92,8 @@ grid-template-columns:1fr 1fr;
 
 <header>
 
-<h1>Escuela Secundaria N°20 Rodolfo Walsh</h1>
-<p>Secundaria N°20 ubicada en Ricardo Rojas, Aquí recibirán actualizaciones sobre lo que pasa en la escuela</p>
+<h1>Escuela Secundaria N°20 Ricardo Rojas</h1>
+<p>Secundaria N°20 ubicada en Ricardo Rojas. Aquí recibirán actualizaciones sobre lo que pasa en la escuela.</p>
 
 </header>
 
@@ -134,11 +112,9 @@ grid-template-columns:1fr 1fr;
 
 <div class="card" id="inicio">
 
-<h2>
-🏫 Inicio
-</h2>
+<h2>🏫 Inicio</h2>
 
-<p>La Escuela Secundaria N°20 Ricardo Rojas forma estudiantes con valores, conocimiento y compromiso con la comunidad de Ricardo Rojas y el Partido de Tigre</p>
+<p>La Escuela Secundaria N°20 forma estudiantes con valores, conocimiento y compromiso con la comunidad de Ricardo Rojas y el Partido de Tigre.</p>
 
 </div>
 
@@ -147,14 +123,17 @@ grid-template-columns:1fr 1fr;
 <h2>📰 Noticias</h2>
 
 <div class="news">
-<h3>Nuevo Centro De Estudiantes</h3>
-<p>La escuela inaugura un nuevo centro de estudiantes (Próximamente).</p>
+
+<div>
+<h3>Nuevo Centro de Estudiantes</h3>
+<p>La escuela inaugura un nuevo centro de estudiantes (próximamente).</p>
 </div>
 
 <div>
 <h3>Torneo</h3>
-<p>Se realizará un torneo de tareas entre cursos</h3>
+<p>Se realizará un torneo entre cursos.</p>
 </div>
+
 <div>
 <h3>Proyectos escolares</h3>
 <p>Los estudiantes presentarán proyectos escolares.</p>
@@ -163,19 +142,20 @@ grid-template-columns:1fr 1fr;
 <div>
 <h3>Proyectos de programación</h3>
 <p>Actividad para aprender tecnología.</p>
+</div>
 
 </div>
+
 </div>
+
 <div class="card" id="eventos">
 
 <h2>📅 Eventos</h2>
 
 <ul>
-
-<li>... — Proyectos escolares </li>
-<li>... — Torneo deportivo</li>
-<li>... — Acto escolar</li>
-
+<li>Próximamente — Proyectos escolares</li>
+<li>Próximamente — Torneo deportivo</li>
+<li>Próximamente — Acto escolar</li>
 </ul>
 
 </div>
@@ -184,7 +164,7 @@ grid-template-columns:1fr 1fr;
 
 <h2>🏫 Institución</h2>
 
-<p>Cuenta con proyectos educativos, y actividades deportivas.</p>
+<p>Cuenta con proyectos educativos y actividades deportivas.</p>
 
 </div>
 
@@ -207,7 +187,7 @@ grid-template-columns:1fr 1fr;
 
 <p>Email: secundaria20@escuela.edu</p>
 <p>Teléfono: 22024845</p>
-<p>Dirección: Ricardo Rojas. Tigre. Buenos Aires</p>
+<p>Dirección: Ricardo Rojas, Tigre, Buenos Aires</p>
 
 </div>
 
@@ -222,18 +202,3 @@ grid-template-columns:1fr 1fr;
 </body>
 
 </html>
-"""
-
-class MyServer(SimpleHTTPRequestHandler):
-
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header("Content-type","text/html")
-        self.end_headers()
-        self.wfile.write(html.encode())
-
-server = HTTPServer(("0.0.0.0", PORT), MyServer)
-
-print("Servidor iniciado en http://localhost:8000")
-
-server.serve_forever()
