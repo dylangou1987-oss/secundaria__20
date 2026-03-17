@@ -122,7 +122,37 @@ grid-template-columns:1fr 1fr;
 
 </head>
 
+ <div id="encuesta">
+  <h2>Encuesta 📊</h2>
+  <p>¿Te gusta la escuela?</p>
+
+  <button onclick="votar('si')">👍 Sí</button>
+  <button onclick="votar('no')">👎 No</button>
+
+  <p id="resultadoEncuesta"></p>
+</div>
+
 <script>
+let votosSi = 0;
+let votosNo = 0;
+
+function votar(opcion) {
+  if (opcion === "si") votosSi++;
+  else votosNo++;
+
+  let total = votosSi + votosNo;
+
+  let porcentajeSi = ((votosSi / total) * 100).toFixed(1);
+  let porcentajeNo = ((votosNo / total) * 100).toFixed(1);
+
+  document.getElementById("resultadoEncuesta").innerHTML =
+    "Sí: " + porcentajeSi + "%<br>No: " + porcentajeNo + "%";
+}
+</script>
+  
+</div>
+
+  <script>
 function toggleInfo(id){
 let x = document.getElementById(id);
 
