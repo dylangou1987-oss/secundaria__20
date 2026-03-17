@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secundaria N°20 Rodolfo Walsh</title>
+<title>Secundaria N°20 Ricardo Rojas</title>
 
 <style>
+
 body{
 font-family: Arial;
 margin:0;
@@ -64,6 +65,12 @@ border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
 .gallery img{
 width:100%;
 border-radius:10px;
@@ -76,73 +83,110 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
+
+@media (max-width:700px){
+
+.news{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>Escuela Secundaria N°20 Ricardo Rojas</h1>
-<p>Noticias y novedades escolares</p>
+
+<h1>Escuela Secundaria N°20 Rodolfo Walsh</h1>
+<p>Secundaria N°20 ubicada en Ricardo Rojas, Aquí recibirán actualizaciones sobre lo que pasa en la escuela</p>
+
 </header>
 
 <nav>
+
 <a href="#inicio">Inicio</a>
 <a href="#noticias">Noticias</a>
-<a href="#fotos">Fotos</a>
 <a href="#eventos">Eventos</a>
+<a href="#institucion">Institución</a>
+<a href="#estudiantes">Estudiantes</a>
+<a href="#contacto">Contacto</a>
+
 </nav>
 
 <div class="container">
 
 <div class="card" id="inicio">
-<h2>🏫 Inicio</h2>
-<p>Bienvenidos a la página oficial de la Secundaria N°20 de Ricardo Rojas partido de Tigre.</p>
+
+<h2>
+🏫 Inicio
+</h2>
+
+<p>La Escuela Secundaria N°20 Ricardo Rojas forma estudiantes con valores, conocimiento y compromiso con la comunidad de Ricardo Rojas y el Partido de Tigre</p>
+
 </div>
 
 <div class="card" id="noticias">
+
 <h2>📰 Noticias</h2>
+
 <div class="news">
-<div>
-<h3>Centro de estudiantes</h3>
-<p>Próximamente se formará el nuevo centro de estudiantes....</p>
+<h3>Nuevo Centro De Estudiantes</h3>
+<p>La escuela inaugura un nuevo centro de estudiantes (Próximamente).</p>
 </div>
 
 <div>
-<h3>Proyectos Escolares</h3>
-<p>Proyectos en varios cursos.</p>
+<h3>Torneo</h3>
+<p>Se realizará un torneo de tareas entre cursos</h3>
+</div>
+<div>
+<h3>Proyectos escolares</h3>
+<p>Los estudiantes presentarán proyectos escolares.</p>
 </div>
 
 <div>
-<h3>Proyectos y Actualizaciones</h3>
-<p>Presentación y actualizacion de proyectos.</p>
-</div>
-
-<div>
-<h3>Programación</h3>
-<p>Clases de tecnología.</p>
-</div>
-</div>
-</div>
-
-<img src="https://lh3.googleusercontent.com/d/1" alt="Escuela">
+<h3>Proyectos de programación</h3>
+<p>Actividad para aprender tecnología.</p>
 
 </div>
-
+</div>
 <div class="card" id="eventos">
+
 <h2>📅 Eventos</h2>
+
 <ul>
-<li>Promo 2026</li>
-<li>Torneo deportivo</li>
-<li>Acto escolar</li>
+
+<li>... — Proyectos escolares </li>
+<li>... — Torneo deportivo</li>
+<li>... — Acto escolar</li>
+
 </ul>
-</div>
 
 </div>
 
-<footer>
-<p>Página creada por Dylan</p>
-</footer>
+<div class="card" id="institucion">
 
-</body>
-</html>
+<h2>🏫 Institución</h2>
+
+<p>Cuenta con proyectos educativos, y actividades deportivas.</p>
+
+</div>
+
+<div class="card" id="estudiantes">
+
+<h2>🎓 Estudiantes</h2>
+
+<p>Los estudiantes participan en actividades como:</p>
+
+<ul>
+<li>Centro de estudiantes</li>
+<li>Eventos deportivos</li>
+</ul>
+
+</div>
