@@ -159,46 +159,51 @@ x.style.display = "none";
 <h3>Nuevo Centro De Estudiantes</h3>
 <p>La escuela inaugura un nuevo centro de estudiantes (Próximamente).</p>
 
-<button onclick="mostrar('info1')">Ver más</button>
+<button onclick="toggleInfo('info1')">Ver más</button>
 <button onclick="alert('Inscripción próximamente')">Inscribirse</button>
 <button onclick="alert('Elecciones en mayo')">Fechas</button>
 
 <div id="info1" style="display:none; margin-top:10px;">
-<p>El centro de estudiantes permitirá a los alumnos participar en decisiones escolares.</p>
+<p>El centro de estudiantes permitirá a los alumnos participar en decisiones escolares, organizar eventos y representar a sus compañeros.</p>
+</div>
 </div>
 
-</div>
-
-<div onclick="toggleInfo('info2')">
-
+<div>
 <h3>Torneo</h3>
-  
 <p>Se realizará un torneo de tareas entre cursos</p>
 
+<button onclick="toggleInfo('info2')">Ver más</button>
+<button onclick="alert('Inscripción abierta')">Inscribirse</button>
+<button onclick="alert('Comienza en junio')">Fechas</button>
+
 <div id="info2" style="display:none; margin-top:10px;">
-<p>El torneo incluirá competencias deportivas y académicas entre diferentes cursos con premios.</p>
+<p>El torneo incluirá distintas actividades deportivas y académicas entre cursos.</p>
 </div>
 </div>
 
-<div onclick="toggleInfo('info3')">
-  
+<div>
 <h3>Proyectos escolares</h3>
-  
 <p>Los estudiantes presentarán proyectos escolares.</p>
 
+<button onclick="toggleInfo('info3')">Ver más</button>
+<button onclick="alert('Entrega en julio')">Inscribirse</button>
+<button onclick="alert('Exposición en agosto')">Fechas</button>
+
 <div id="info3" style="display:none; margin-top:10px;">
-<p>Se expondrán trabajos de ciencias, tecnología y arte realizados por los alumnos.</p>
+<p>Se presentarán proyectos de ciencias, tecnología y arte realizados por los alumnos.</p>
 </div>
 </div>
 
-<div onclick="toggleInfo('info4')">
-  
+<div>
 <h3>Proyectos de programación</h3>
-  
 <p>Actividad para aprender tecnología.</p>
 
+<button onclick="toggleInfo('info4')">Ver más</button>
+<button onclick="alert('Cupos limitados')">Inscribirse</button>
+<button onclick="alert('Inicio en septiembre')">Fechas</button>
+
 <div id="info4" style="display:none; margin-top:10px;">
-<p>Se enseñará programación básica para que los estudiantes creen sus propios proyectos digitales.</p>
+<p>Los alumnos aprenderán programación básica y crearán sus propios proyectos digitales.</p>
 </div>
 </div>
 
