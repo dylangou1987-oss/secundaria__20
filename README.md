@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Secundaria N°20 Ricardo Rojas</title>
+<title>Secundaria N°20 Rodolfo Walsh</title>
 
 <style>
 
@@ -93,6 +93,7 @@ grid-template-columns:1fr;
 <header>
 
 <h1>Escuela Secundaria N°20 Ricardo Rojas</h1>
+
 <p>Secundaria N°20 ubicada en Ricardo Rojas. Aquí recibirán actualizaciones sobre lo que pasa en la escuela.</p>
 
 </header>
