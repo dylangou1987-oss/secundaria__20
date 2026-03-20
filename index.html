@@ -6,7 +6,13 @@
 <title>Secundaria N°20 Rodolfo Walsh</title>
 
 <style>
-  
+
+  .banner-intensificacion {
+  position: relative;
+}
+.banner-intensificacion::before {
+  content: "";
+}
 .banner - intensificacion {
   position: relative;
   height: 400px;
@@ -225,7 +231,7 @@ x.style.display = "none";
 
 <a href="#inicio">Inicio</a>
 <a href="#noticias">Noticias</a>
-<a href="#banner - intensificacion" class="btn-ir">Ver Intensificación</a>
+<a href="#intensificacion">Ver Intensificación</a>
 <a href="#listaAzul">🔵 Lista Azul</a> |
 <a href="#listaRoja">🔴 Lista Roja</a>
 <a href="#barrio">Inicio Barrio</a>
@@ -309,7 +315,7 @@ x.style.display = "none";
 
 </div>
 
-<div class="banner-intensificacion">
+<div class="banner-intensificacion" id="intensificacion">
   <div class="contenido">
     <h1>PERÍODOS DE</h1>
     <h2>INTENSIFICACIÓN 2026</h2>
