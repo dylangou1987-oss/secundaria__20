@@ -7,6 +7,33 @@
 
 <style>
 
+form{
+margin-top:15px;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+button{
+background:#007BFF;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
 .rgb {
   font-weight: bold;
   animation: rgbColor 3s infinite linear;
@@ -348,11 +375,45 @@ x.style.display = "none";
   
 <div class="card" id="listaAzul">
 
-<h2>🔵 Lista Azul</h2>
+  <div class="card" id="listaAzul">
 
-<p>Aquí Aparecera la información de la Lista Azul.</p>
+<h2>🔵 Lista Azul — Inscripciones Abiertas</h2>
 
-</div>
+<p>Si quieres formar parte de la Lista Azul del Centro de Estudiantes, completa este formulario:</p>
+
+<form>
+
+<label>Nombre completo:</label><br>
+<input type="text" placeholder="Tu nombre" required><br><br>
+
+<label>Curso:</label><br>
+<input type="text" placeholder="Ej: 3°A" required><br><br>
+
+<label>Cargo que deseas:</label><br>
+<select required>
+
+<option value="">Seleccionar</option>
+
+<option>Presidente</option>
+<option>Vicepresidente</option>
+<option>Secretario</option>
+<option>Tesorero</option>
+<option>Delegado</option>
+
+</select>
+
+<br><br>
+
+<label>Motivo para unirte:</label><br>
+<textarea placeholder="Escribe por qué quieres participar"></textarea>
+
+<br><br>
+
+<button type="submit">🔵 Enviar Inscripción</button>
+
+</form>
+
+  </div>
 
 <div class="card" id="listaRoja">
 
